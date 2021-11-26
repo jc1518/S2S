@@ -1,0 +1,8 @@
+{
+  "name": "s2s-lambda-demo",
+  "repository": "https://github.com/jc1518/S2S-Lambda-Sample",
+  "branch": "demo",
+  "runtime": "nodejs_14_x",
+  "handler": "index.handler",
+  "api": true
+}

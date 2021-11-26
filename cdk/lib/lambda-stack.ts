@@ -5,13 +5,13 @@ import { error } from "console";
 import * as path from "path";
 
 export interface LambdaAppConfig extends StackProps {
+  name: string;
   repository: string;
   branch: string;
   runtime: string;
   handler: string;
-  apiGateway: boolean;
+  api: boolean;
   scheduler?: string;
-  codedir: string;
 }
 
 export class LambdaStack extends Stack {
@@ -40,10 +40,10 @@ export class LambdaStack extends Stack {
     const handler = new lambda.Function(this, "Lambda", {
       runtime: appRuntime,
       handler: props.handler,
-      code: lambda.Code.fromAsset(path.join(__dirname, `../${props.codedir}`)),
+      code: lambda.Code.fromAsset(path.join(__dirname, `../${props.name}`)),
     });
 
-    if (props.apiGateway) {
+    if (props.api) {
       const gw = new apigw.LambdaRestApi(this, "Gateway", {
         handler,
       });
