@@ -1,0 +1,14 @@
+{
+  "name": "s2s-ecs-demo",
+  "repository": "https://github.com/jc1518/S2S-ECS-Sample",
+  "branch": "master",
+  "commit": "c87195e",
+  "vpc_id": "vpc-0e992e4afc4d7a6a6",
+  "min_task": 2,
+  "max_task": 3,
+  "cpu": 256,
+  "memory": 256,
+  "container_port": 5000,
+  "service_port": 443,
+  "alb": true
+}
