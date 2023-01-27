@@ -31,7 +31,7 @@
     "@aws-cdk/core": "^1.134.0",
     "cdk-ecr-deployment": "0.0.80",
     "path": "^0.12.7",
-    "simple-git": "^3.5.0",
+    "simple-git": "^3.16.0",
     "source-map-support": "^0.5.16"
   }
 }
